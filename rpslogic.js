@@ -44,9 +44,22 @@ function getPlayerChoice()
     
 function playRound(playerSelection,computerSelection)
     {
-        matchVar=playerSelection.tostring()+computerSelection.tostring();
+        matchVar=playerSelection.tostring() + computerSelection.tostring();
+        if(matchVar=="12"||"23"||"31")
+            {
+                console.log("You won this round! ")
+            }
+        else if(matchVar=="13"||"21"||"32")
+            {
+                console.log("You lost this round! ")
+            }    
+        else
+            {
+                console.log("It's a tie!")
+            }            
         return matchVar;  
     }    
+playRound(playerSelection,computerSelection);    
 
 
 
