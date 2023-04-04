@@ -1,18 +1,21 @@
+let playerName;
 
 function displayHand(handReading)
-    {
+    {   
         if(handReading==0)
-            console.log("Computer chose Rock");
+            console.log(playerName +" chose Rock");
         else if(handReading==1)
-            console.log("Computer chose Paper");
+            console.log(playerName +" chose Paper");
         else
-            console.log("Computer chose Scissor");
+            console.log(playerName +" chose Scissor");
     }
 
 
 function getComputerChoice()
-    {
+    {   
+        playerName="Computer";
         let computerHand = Math.floor(Math.random()*3);
         displayHand(computerHand);
         return computerHand;
     }
+
