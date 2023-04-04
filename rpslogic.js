@@ -39,6 +39,12 @@ function getPlayerChoice()
              displayHand(playerSelection);}
         return playerSelection;
     }
+    
+function playRound(playerSelection,computerSelection)
+    {
+        matchVar=playerSelection.tostring()+computerSelection.tostring();
+        return matchVar;  
+    }    
 
 
 
