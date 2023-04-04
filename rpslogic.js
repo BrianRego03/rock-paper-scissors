@@ -1,5 +1,5 @@
 let playerName;
-let playerSelection;
+let playerSelection=getPlayerChoice();
 let computerSelection;
 let matchVar;
 
