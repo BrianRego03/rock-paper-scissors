@@ -2,6 +2,8 @@ let playerName;
 let playerSelection=getPlayerChoice();
 let computerSelection=getComputerChoice();
 let matchVar;
+let computerScore;
+let playerScore;
 
 function displayHand(handReading)
     {   
@@ -59,7 +61,12 @@ function playRound(playerSelection,computerSelection)
             }            
         return matchVar;  
     }    
-playRound(playerSelection,computerSelection);    
+playRound(playerSelection,computerSelection); 
+
+function game()
+    {
+
+    } 
 
 
 
