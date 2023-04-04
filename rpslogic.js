@@ -37,7 +37,7 @@ function getPlayerChoice()
              displayHand(playerChoice);}
 
         else
-            {playerSelection=2;
+            {playerChoice=2;
              displayHand(playerChoice);}
         return playerChoice;
     }
