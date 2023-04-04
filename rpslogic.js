@@ -24,20 +24,21 @@ function getComputerChoice()
 
 function getPlayerChoice()
     {   
-        playerName="You"
+        playerName="You";
+        let playerChoice;
         let playerInput= prompt("Rock, Paper or Scissor?");
         if(playerInput.toLowerCase()=="rock")
-            {playerSelection=0;
-             displayHand(playerSelection);}
+            {playerChoice=0;
+             displayHand(playerChoice);}
 
         else if(playerInput.toLowerCase()=="paper")
-            {playerSelection=1;
-             displayHand(playerSelection);}
+            {playerChoice=1;
+             displayHand(playerChoice);}
 
         else
             {playerSelection=2;
-             displayHand(playerSelection);}
-        return playerSelection;
+             displayHand(playerChoice);}
+        return playerChoice;
     }
     
 function playRound(playerSelection,computerSelection)
