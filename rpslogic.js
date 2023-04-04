@@ -1,6 +1,6 @@
 let playerName;
-let playerSelection=getPlayerChoice();
-let computerSelection=getComputerChoice();
+let playerSelection;
+let computerSelection;
 let matchVar;
 let computerScore=0;
 let playerScore=0;
@@ -68,7 +68,9 @@ function playRound(playerSelection,computerSelection)
 function game()
     {
         for(i=0;i<5;i++)
-            {
+            {   
+                playerSelection=getPlayerChoice();
+                computerSelection=getComputerChoice();
                 playRound(playerSelection,computerSelection);
             }
         if(playerScore>computerScore)
