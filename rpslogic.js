@@ -61,7 +61,7 @@ function playRound(playerSelection,computerSelection)
             }            
         return matchVar;  
     }    
-playRound(playerSelection,computerSelection); 
+ 
 
 function game()
     {
