@@ -1,12 +1,12 @@
 
 function displayHand(handReading)
     {
-        if(handReading==1)
+        if(handReading==0)
             console.log("Computer chose Rock");
-        else if(handReading==2)
+        else if(handReading==1)
             console.log("Computer chose Paper");
         else
-            console.log("Computer chose Rock");
+            console.log("Computer chose Scissor");
     }
 
 
