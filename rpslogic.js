@@ -17,9 +17,10 @@ function displayHand(handReading)
 function getComputerChoice()
     {   
         playerName="Computer";
+        let computerChoice;
         computerSelection = Math.floor(Math.random()*3);
-        displayHand(computerSelection);
-        return computerSelection;
+        displayHand(computerChoice);
+        return computerChoice;
     }
 
 function getPlayerChoice()
