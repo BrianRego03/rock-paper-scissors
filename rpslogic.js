@@ -1,5 +1,5 @@
 
-displayHand(handReading)
+function displayHand(handReading)
     {
         if(handReading==1)
             console.log("Computer chose Rock");
@@ -10,9 +10,9 @@ displayHand(handReading)
     }
 
 
-getComputerChoice()
+function getComputerChoice()
     {
-        computerHand=Math.floor(Math.random()*3);
+        let computerHand = Math.floor(Math.random()*3);
         displayHand(computerHand);
         return computerHand;
     }
