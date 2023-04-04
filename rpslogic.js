@@ -1,5 +1,6 @@
 let playerName;
 let playerSelection;
+let computerSelection;
 
 function displayHand(handReading)
     {   
@@ -15,9 +16,9 @@ function displayHand(handReading)
 function getComputerChoice()
     {   
         playerName="Computer";
-        let computerHand = Math.floor(Math.random()*3);
-        displayHand(computerHand);
-        return computerHand;
+        computerSelection = Math.floor(Math.random()*3);
+        displayHand(computerSelection);
+        return computerSelection;
     }
 
 function getPlayerChoice()
@@ -37,6 +38,7 @@ function getPlayerChoice()
              displayHand(playerSelection);}
         return playerSelection;
     }
+
 
 
 
