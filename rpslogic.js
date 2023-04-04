@@ -1,6 +1,6 @@
 let playerName;
 let playerSelection=getPlayerChoice();
-let computerSelection;
+let computerSelection=getComputerChoice();
 let matchVar;
 
 function displayHand(handReading)
