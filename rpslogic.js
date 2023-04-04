@@ -18,7 +18,7 @@ function getComputerChoice()
     {   
         playerName="Computer";
         let computerChoice;
-        computerSelection = Math.floor(Math.random()*3);
+        computerChoice = Math.floor(Math.random()*3);
         displayHand(computerChoice);
         return computerChoice;
     }
@@ -44,7 +44,7 @@ function getPlayerChoice()
     
 function playRound(playerSelection,computerSelection)
     {
-        matchVar=playerSelection.tostring() + computerSelection.tostring();
+        matchVar=playerSelection.toString() + computerSelection.toString();
         if(matchVar=="12"||"23"||"31")
             {
                 console.log("You won this round! ")
