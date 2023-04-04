@@ -4,6 +4,7 @@ let computerSelection;
 let matchVar;
 let computerScore=0;
 let playerScore=0;
+let roundNumber=0;
 
 function displayHand(handReading)
     {   
@@ -49,12 +50,12 @@ function playRound(playerSelection,computerSelection)
         matchVar=computerSelection.toString() + playerSelection.toString();
         if(matchVar=="01"||matchVar=="12"||matchVar=="20")
             {
-                console.log("You won this round! ");
+                console.log("You won round " + roundNumber + "!");
                 playerScore++;
             }
         else if(matchVar=="02"||matchVar=="10"||matchVar=="21")
             {
-                console.log("You lost this round! ");
+                console.log("You lost round " + roundNumber + "!");
                 computerScore++;
             }    
         else
@@ -69,6 +70,7 @@ function game()
     {
         for(i=0;i<5;i++)
             {   
+                ++roundNumber;
                 playerSelection=getPlayerChoice();
                 computerSelection=getComputerChoice();
                 playRound(playerSelection,computerSelection);
