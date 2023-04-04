@@ -44,12 +44,12 @@ function getPlayerChoice()
     
 function playRound(playerSelection,computerSelection)
     {
-        matchVar=playerSelection.toString() + computerSelection.toString();
-        if(matchVar=="01"||"12"||"20")
+        matchVar=computerSelection.toString() + playerSelection.toString();
+        if(matchVar=="01"||matchVar=="12"||matchVar=="20")
             {
                 console.log("You won this round! ")
             }
-        else if(matchVar=="02"||"10"||"21")
+        else if(matchVar=="02"||matchVar=="10"||matchVar=="21")
             {
                 console.log("You lost this round! ")
             }    
