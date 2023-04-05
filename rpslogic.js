@@ -16,6 +16,18 @@ function displayHand(handReading)
             console.log(playerName +" chose Scissor");
     }
 
+function playerDecision(playerPick)
+    {   
+        let playerHand;
+        if(playerPick==0)
+            playerHand="Rock";
+        else if (playerPick==1)
+            playerHand="Paper";
+        else
+            playerHand="Scissor";  
+        return playerHand;      
+    }
+
 
 function getComputerChoice()
     {   
@@ -46,16 +58,20 @@ function getPlayerChoice()
     }
     
 function playRound(playerSelection,computerSelection)
-    {
+    {   
+        let playerHandName=playerDecision(playerSelection);
+        let computerHandName=playerDecision(computerSelection);
         matchVar=computerSelection.toString() + playerSelection.toString();
         if(matchVar=="01"||matchVar=="12"||matchVar=="20")
             {
-                console.log("You won round " + roundNumber + "!");
+                console.log("You won round " + roundNumber + "! "
+                            + playerHandName +" beats " + computerHandName + "!");
                 playerScore++;
             }
         else if(matchVar=="02"||matchVar=="10"||matchVar=="21")
             {
-                console.log("You lost round " + roundNumber + "!");
+                console.log("You lost round " + roundNumber + "! "
+                            + computerHandName +" beats " + playerHandName + "!");
                 computerScore++;
             }    
         else
