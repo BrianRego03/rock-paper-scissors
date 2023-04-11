@@ -50,3 +50,11 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(16, 1, 109);
 }
+.RoundResult{
+    background-color: rgb(28, 170, 122);
+    color: rgb(39, 11, 11);
+    font-size: xx-large;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 30px;
+}
