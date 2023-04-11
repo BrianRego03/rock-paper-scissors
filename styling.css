@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+.pagehead{
+    font-family:fantasy;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    color: #ff0000;
+}
+.subhead{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: x-large;
+    color:#ff8012
+}
