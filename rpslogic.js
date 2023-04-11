@@ -78,7 +78,9 @@ function getPlayerChoice(buttonIdentity)
     
 function playRound(element)
     {   
-        console.log(element);
+        
+        if((playerScore==5)||(computerScore==5))
+            return;
         playerSelection=getPlayerChoice(element);
         let playerHandName=playerDecision(playerSelection);
         computerSelection=getComputerChoice();
@@ -86,20 +88,24 @@ function playRound(element)
         matchVar=computerSelection.toString() + playerSelection.toString();
         if(matchVar=="01"||matchVar=="12"||matchVar=="20")
             {
-                console.log("You won round " + roundNumber + "! "
-                            + playerHandName +" beats " + computerHandName + "!");
+                document.querySelector(".RoundResult").textContent=
+                "You won this round! "
+                + playerHandName +" beats " + computerHandName + "!";
                 playerScore++;
             }
         else if(matchVar=="02"||matchVar=="10"||matchVar=="21")
             {
-                console.log("You lost round " + roundNumber + "! "
-                            + computerHandName +" beats " + playerHandName + "!");
+                document.querySelector(".RoundResult").textContent=
+                "You lose! " + computerHandName +" beats " + playerHandName + "!";
                 computerScore++;
             }    
         else
             {
-                console.log("Round " + roundNumber + " is a tie!");
-            }            
+                document.querySelector(".RoundResult").textContent=
+                "It's a tie!";
+            }
+                    
+
         return matchVar;  
     }    
  
