@@ -91,19 +91,25 @@ function playRound(element)
                 document.querySelector(".RoundResult").textContent=
                 "You won this round! "
                 + playerHandName +" beats " + computerHandName + "!";
-                playerScore++;
+                ++playerScore;
+                
             }
         else if(matchVar=="02"||matchVar=="10"||matchVar=="21")
             {
                 document.querySelector(".RoundResult").textContent=
                 "You lose this round! " + computerHandName +" beats " + playerHandName + "!";
-                computerScore++;
+                ++computerScore;
             }    
         else
             {
                 document.querySelector(".RoundResult").textContent=
                 "It's a tie!";
             }
+
+            document.querySelector(".PlayerTitle").textContent= "Your score:"  
+            document.querySelector(".ComputerTitle").textContent= "Computer score:"
+            document.querySelector(".PlayerPoints").textContent= playerScore;
+            document.querySelector(".ComputerPoints").textContent= computerScore;  
         if(playerScore==5)
             {
         
@@ -117,7 +123,7 @@ function playRound(element)
             {
                 const DIV_RESULT=document.createElement("div");
                 DIV_RESULT.innerText=
-                "You lost the match! Prepare for Judgement Day";  
+                "You lost the match! Prepare for Judgement Day!";  
                 document.querySelector(".RoundResult").appendChild(DIV_RESULT); 
             }    
         return matchVar;  
