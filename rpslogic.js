@@ -55,12 +55,13 @@ function getPlayerChoice(buttonIdentity)
             {playerChoice=2;
              displayHand(playerChoice);}
         
-        computerSelection=getComputerChoice();     
+           
     }
     
-function playRound(playerSelection,computerSelection)
+function playRound(playerSelection)
     {   
         let playerHandName=playerDecision(playerSelection);
+        computerSelection=getComputerChoice();
         let computerHandName=playerDecision(computerSelection);
         matchVar=computerSelection.toString() + playerSelection.toString();
         if(matchVar=="01"||matchVar=="12"||matchVar=="20")
