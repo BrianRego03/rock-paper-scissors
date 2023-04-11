@@ -81,8 +81,11 @@ function playRound(playerSelection,computerSelection)
         return matchVar;  
     }    
  
-
-
+const buttons=document.getElementsByClassName("buttonimage");
+buttons.forEach(element => {
+    buttons.addEventListener('click',getPlayerChoice(element));
+    
+});
 
 
 
