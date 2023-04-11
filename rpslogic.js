@@ -82,24 +82,6 @@ function playRound(playerSelection,computerSelection)
     }    
  
 
-function game()
-    {
-        for(i=0;i<5;i++)
-            {   
-                ++roundNumber;
-                playerSelection=getPlayerChoice();
-                computerSelection=getComputerChoice();
-                playRound(playerSelection,computerSelection);
-            }
-        if(playerScore>computerScore)
-            console.log("You won the match!");
-        else if(computerScore>playerScore)
-            console.log("You lost the match!");
-        else
-            console.log("Match is a draw");
-    } 
-
-game();
 
 
 
