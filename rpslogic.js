@@ -96,7 +96,7 @@ function playRound(element)
         else if(matchVar=="02"||matchVar=="10"||matchVar=="21")
             {
                 document.querySelector(".RoundResult").textContent=
-                "You lose! " + computerHandName +" beats " + playerHandName + "!";
+                "You lose this round! " + computerHandName +" beats " + playerHandName + "!";
                 computerScore++;
             }    
         else
@@ -104,8 +104,22 @@ function playRound(element)
                 document.querySelector(".RoundResult").textContent=
                 "It's a tie!";
             }
-                    
-
+        if(playerScore==5)
+            {
+        
+                const DIV_RESULT=document.createElement("div");
+                DIV_RESULT.innerText=
+                "You won the match! Humanity lives to fight another day";  
+                document.querySelector(".RoundResult").appendChild(DIV_RESULT);
+                         
+            }
+        else if(computerScore==5)
+            {
+                const DIV_RESULT=document.createElement("div");
+                DIV_RESULT.innerText=
+                "You lost the match! Prepare for Judgement Day";  
+                document.querySelector(".RoundResult").appendChild(DIV_RESULT); 
+            }    
         return matchVar;  
     }    
  
