@@ -54,23 +54,25 @@ function getPlayerChoice(buttonIdentity)
     {   
         playerName="You";
         
-        if(buttonIdentity=="rockbutton")
+        if(buttonIdentity=="rockButton")
             {playerChoice=0;
              displayPlayerHand(playerChoice);}
 
-        else if(buttonIdentity=="paperbutton")
+        else if(buttonIdentity=="paperButton")
             {playerChoice=1;
              displayPlayerHand(playerChoice);}
 
         else
             {playerChoice=2;
              displayPlayerHand(playerChoice);}
-        
+        return playerChoice;
            
     }
     
-function playRound(playerSelection)
+function playRound(element)
     {   
+        console.log(element);
+        playerSelection=getPlayerChoice(element);
         let playerHandName=playerDecision(playerSelection);
         computerSelection=getComputerChoice();
         let computerHandName=playerDecision(computerSelection);
@@ -94,11 +96,18 @@ function playRound(playerSelection)
         return matchVar;  
     }    
  
-const buttons=document.getElementsByClassName("buttonimage");
-buttons.forEach((button) => {
-    buttons.addEventListener('click',playRound(button.id));
-    
-});
+const buttonRock=document.querySelector('#rockButton');
+
+buttonRock.addEventListener('click',()=>{playRound(buttonRock.id);});
+
+const buttonPaper=document.querySelector('#paperButton');
+
+buttonPaper.addEventListener('click',()=>{playRound(buttonPaper.id);});
+
+const buttonScissor=document.querySelector('#scissorButton');
+
+buttonScissor.addEventListener('click',()=>{playRound(buttonScissor.id);});
+
 
 
 
