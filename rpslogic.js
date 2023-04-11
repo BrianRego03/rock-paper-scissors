@@ -7,7 +7,7 @@ let playerScore=0;
 let roundNumber=0;
 let playerChoice;
 
-function displayHand(handReading)
+function displayPlayerHand(handReading)
     {   
         if(handReading==0)
             console.log(playerName +" chose Rock");
@@ -16,6 +16,17 @@ function displayHand(handReading)
         else
             console.log(playerName +" chose Scissor");
     }
+function displayComputerHand(handReading)
+{   
+    if(handReading==0)
+        console.log(playerName +" chose Rock");
+    else if(handReading==1)
+        console.log(playerName +" chose Paper");
+    else
+        console.log(playerName +" chose Scissor");
+}
+
+    
 
 function playerDecision(playerPick)
     {   
@@ -35,7 +46,7 @@ function getComputerChoice()
         playerName="Computer";
         let computerChoice;
         computerChoice = Math.floor(Math.random()*3);
-        displayHand(computerChoice);
+        displayComputerHand(computerChoice);
         return computerChoice;
     }
 
@@ -45,15 +56,15 @@ function getPlayerChoice(buttonIdentity)
         
         if(buttonIdentity=="rockbutton")
             {playerChoice=0;
-             displayHand(playerChoice);}
+             displayPlayerHand(playerChoice);}
 
         else if(buttonIdentity=="paperbutton")
             {playerChoice=1;
-             displayHand(playerChoice);}
+             displayPlayerHand(playerChoice);}
 
         else
             {playerChoice=2;
-             displayHand(playerChoice);}
+             displayPlayerHand(playerChoice);}
         
            
     }
