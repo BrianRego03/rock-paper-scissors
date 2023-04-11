@@ -29,3 +29,24 @@ body{
 .buttonimage{
     background-color: black;
 }
+.ChoiceDisplay{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.PlayerStatement{
+    color: azure;
+    font-size: large;
+    text-align: center;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(0, 68, 0);
+}
+.ComputerStatement{
+    color: rgb(0, 0, 0);
+    font-size: large;
+    text-align: center;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(219, 4, 4);
+}
