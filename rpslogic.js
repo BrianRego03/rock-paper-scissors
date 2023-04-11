@@ -9,22 +9,29 @@ let playerChoice;
 
 function displayPlayerHand(handReading)
     {   
+
         if(handReading==0)
-            console.log(playerName +" chose Rock");
+            document.querySelector(".PlayerStatement").textContent=
+            playerName +" chose Rock";
         else if(handReading==1)
-            console.log(playerName +" chose Paper");
+            document.querySelector(".PlayerStatement").textContent=
+            playerName +" chose Paper";
         else
-            console.log(playerName +" chose Scissor");
+            document.querySelector(".PlayerStatement").textContent=
+            playerName +" chose Scissor";
     }
 function displayComputerHand(handReading)
-{   
-    if(handReading==0)
-        console.log(playerName +" chose Rock");
-    else if(handReading==1)
-        console.log(playerName +" chose Paper");
-    else
-        console.log(playerName +" chose Scissor");
-}
+    {   
+        if(handReading==0)
+            document.querySelector(".ComputerStatement").textContent=
+            playerName +" chose Rock";
+        else if(handReading==1)
+            document.querySelector(".ComputerStatement").textContent=
+            playerName +" chose Paper";
+        else
+            document.querySelector(".ComputerStatement").textContent=
+            playerName +" chose Scissor";
+    }
 
     
 
