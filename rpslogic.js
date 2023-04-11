@@ -5,6 +5,7 @@ let matchVar;
 let computerScore=0;
 let playerScore=0;
 let roundNumber=0;
+let playerChoice;
 
 function displayHand(handReading)
     {   
@@ -38,23 +39,23 @@ function getComputerChoice()
         return computerChoice;
     }
 
-function getPlayerChoice()
+function getPlayerChoice(buttonIdentity)
     {   
         playerName="You";
-        let playerChoice;
-        let playerInput= prompt("Rock, Paper or Scissor?");
-        if(playerInput.toLowerCase()=="rock")
+        
+        if(buttonIdentity=="rockbutton")
             {playerChoice=0;
              displayHand(playerChoice);}
 
-        else if(playerInput.toLowerCase()=="paper")
+        else if(buttonIdentity=="paperbutton")
             {playerChoice=1;
              displayHand(playerChoice);}
 
         else
             {playerChoice=2;
              displayHand(playerChoice);}
-        return playerChoice;
+        
+        computerSelection=getComputerChoice();     
     }
     
 function playRound(playerSelection,computerSelection)
@@ -82,8 +83,8 @@ function playRound(playerSelection,computerSelection)
     }    
  
 const buttons=document.getElementsByClassName("buttonimage");
-buttons.forEach(element => {
-    buttons.addEventListener('click',getPlayerChoice(element));
+buttons.forEach((button) => {
+    buttons.addEventListener('click',playRound(button.id));
     
 });
 
