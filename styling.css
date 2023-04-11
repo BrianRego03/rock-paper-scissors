@@ -58,3 +58,26 @@ body{
     text-align: center;
     margin-top: 30px;
 }
+.ScoreBoard{
+    background-color: gray;
+    color: black;
+    font-weight: 700;
+    display:flex;
+    justify-content: space-evenly;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.PlayerScore, .ComputerScore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.ComputerTitle, .PlayerTitle{
+    font-size: large;
+}
+.PlayerPoints, .ComputerPoints{
+    font-size: xx-large;
+
+}
